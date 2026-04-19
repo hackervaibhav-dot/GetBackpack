@@ -2,23 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "webb.py",
+      "src": "app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "webb.py"
+      "dest": "app.py"
     }
-  ],
-  "env": {
-    "PYTHONPATH": "."
-  },
-  "functions": {
-    "webb.py": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  }
+  ]
 }
